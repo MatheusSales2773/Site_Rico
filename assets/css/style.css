@@ -1,0 +1,204 @@
+body {
+    padding-top: 56px;
+    font-family: 'Arial', sans-serif; 
+    background-color: #7A6EF5; /
+}
+
+/* Estilos para o Header (Navbar) */
+.bg-custom-purple {
+    background-color: #3F2A87; 
+}
+
+.navbar-brand img {
+    /* Se precisar de ajustes específicos para o logo */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85); /* Cor padrão para links na navbar dark, um pouco mais opaco */
+    font-weight: 500; /* Um pouco mais de peso na fonte */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active { /* Estilo para link ativo também */
+    color: #ffffff;
+}
+
+/* Botão "Login" (btn-outline-light na navbar) */
+.navbar-dark .navbar-nav .nav-item .btn-outline-light {
+    color: #ffffff !important; /* Cor do texto branca */
+    border-color: #ffffff !important; /* Cor da borda branca */
+    border-radius: 20px; /* Bordas arredondadas consistentes */
+    padding: 6px 15px; /* Padding vertical e horizontal (ajuste se necessário) */
+    font-weight: 500; /* Peso da fonte */
+    line-height: 1.5; /* Ajuste para melhor alinhamento vertical do texto se necessário */
+    background-color: transparent; /* Garante que não haja fundo por padrão */
+}
+
+.navbar-dark .navbar-nav .nav-item .btn-light { /* Botão "Cadastre-se" */
+    background-color: #ffffff;
+    color: #3F2A87; /* Cor do texto do botão "Cadastre-se" para o roxo principal */
+    border-radius: 15px; /* Bordas arredondadas para o botão */
+    padding-left: 15px; /* Mais padding horizontal */
+    padding-right: 15px;
+    padding-top: 6px; /* Padding vertical menor */
+    padding-bottom: 6px;
+    font-weight: 500;
+}
+
+/* Quadrado do meio da tela inicial */
+.navbar-dark .navbar-nav .nav-item .btn-light:hover {
+    background-color: #f0f0f0; /* Um leve escurecimento no hover */
+    color: #301F6A; /* Roxo um pouco mais escuro no hover */
+}
+
+
+/* Estilos para a Seção Hero */
+.hero-section {
+
+    background-color: #2D234D; 
+    color: white; /* Cor do texto para branco */
+    padding: 80px 0 0px 0; 
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    width: 100%; /* Garante que a seção ocupe toda a largura */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* Para o botão "Ver Mais" */
+}
+
+.hero-section .container {
+    position: relative; /* Para o botão "Ver Mais" se ele for dentro do container */
+    z-index: 2; /* Para garantir que o conteúdo fique acima de possíveis elementos de fundo */
+}
+
+.hero-section h1 {
+    font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto */
+    font-size: 5rem; 
+    font-weight: 700; /* Usando o peso "bold" da Roboto que importamos */
+    margin-bottom: 30px;
+    line-height: 1.2; /* Ajuste para o espaçamento entre linhas desejado */
+    max-width: 600px; /* IMPORTANTE: Limita a largura do h1, forçando a quebra de texto.*/
+}   
+
+.hero-section .lead {
+    font-size: 1.3rem; /* Tamanho da fonte do parágrafo - um pouco maior */
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    opacity: 0.9; 
+}
+
+.hero-section .btn {
+    padding: 20px 42px; /* AUMENTADO - ajuste conforme necessário */
+    font-size: 1.2rem; /* AUMENTADO - ajuste conforme necessário */
+    font-weight: bold;
+    border-radius: 8px; 
+    text-transform: uppercase; 
+    margin-right: 20px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; 
+}
+
+.hero-section .btn:hover {
+    transform: translateY(-2px); /* Leve efeito de elevação no hover */
+}
+
+/* Botão "ENTRE AGORA" */
+.hero-section .btn-custom-primary { 
+    background-color: #E6E6F0; /* Fundo branco */
+    color: #3F2A87; /* Texto roxo escuro (cor da navbar) */
+}
+
+.hero-section .btn-custom-primary:hover {
+    background-color: #f0f0f0; /* Branco um pouco mais escuro no hover */
+    color: #301F6A; 
+}
+
+/* Botão "VEJA O TRAILER" */
+.hero-section .btn-custom-secondary {
+    background-color: #5C4B99; /* Roxo mais claro para o fundo do botão - ajuste esta cor */
+    color: #ffffff; /* Texto branco */
+}
+
+.hero-section .btn-custom-secondary:hover {
+    background-color: #4A3A80; /* Roxo um pouco mais escuro para o hover */
+    color: #ffffff; 
+}
+
+.hero-section img.img-fluid {
+    max-width: 100%; 
+    height: auto;
+    /* Adicionar um filtro de sombra sutil se combinar com o design */
+    /* filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.1)); */
+}
+
+/* Botão "Ver Mais" - Estilização inicial */
+.hero-section .btn-ver-mais {
+    position: absolute; 
+    bottom: 30px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #5C4B99; 
+    color: white;
+    padding: 12px 25px; 
+    font-size: 0.9rem; 
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 3; 
+    border: none;
+}
+
+.hero-section .btn-ver-mais:hover {
+    background-color: #4A3A80;
+    color: white;
+}
+
+
+/* Ajustes para telas menores, se necessário */
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-section .col-md-6.text-center { /* Para a coluna da imagem */
+        margin-top: 40px; /* Adiciona espaço acima da imagem em telas menores quando empilhado */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+        text-align: center; /* Centraliza o texto em telas menores */
+    }
+
+    .hero-section .row > div { /* Para aplicar a todos os filhos diretos da row */
+        margin-bottom: 30px; 
+    }
+     .hero-section .row > div:last-child {
+        margin-bottom: 0;
+    }
+
+
+    .hero-section h1 {
+        font-size: 2.5rem; /* Ajuste para mobile */
+    }
+
+    .hero-section .lead {
+        font-size: 1.15rem; /* Ajuste para mobile */
+        margin-bottom: 40px;
+        opacity: 0.9; 
+    }
+
+    .hero-section .btn {
+        margin-left: 5px; 
+        margin-right: 5px;
+        margin-bottom: 15px; 
+        width: auto; 
+    }
+    .hero-section .btn:last-of-type { /* Para o último botão do grupo */
+        margin-bottom: 0;
+    }
+
+    .hero-section .btn-ver-mais {
+        bottom: 20px; /* Ajusta posição do "Ver Mais" em mobile */
+    }
+}

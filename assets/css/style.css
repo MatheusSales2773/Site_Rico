@@ -9,8 +9,10 @@ body {
     background-color: #3F2A87; 
 }
 
+/* Logo da Navbar */
 .navbar-brand img {
-    /* Se precisar de ajustes específicos para o logo */
+    height: 40px;
+    width: auto;  
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -23,21 +25,28 @@ body {
     color: #ffffff;
 }
 
-/* Botão "Login" (btn-outline-light na navbar) */
+/* Botão "Login" */
 .navbar-dark .navbar-nav .nav-item .btn-outline-light {
     color: #ffffff !important; /* Cor do texto branca */
     border-color: #ffffff !important; /* Cor da borda branca */
-    border-radius: 20px; /* Bordas arredondadas consistentes */
+    border-radius: 12px; /* Bordas arredondadas consistentes */
     padding: 6px 15px; /* Padding vertical e horizontal (ajuste se necessário) */
     font-weight: 500; /* Peso da fonte */
     line-height: 1.5; /* Ajuste para melhor alinhamento vertical do texto se necessário */
     background-color: transparent; /* Garante que não haja fundo por padrão */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Adiciona transição suave */
 }
 
-.navbar-dark .navbar-nav .nav-item .btn-light { /* Botão "Cadastre-se" */
+.navbar-dark .navbar-nav .nav-item .btn-outline-light:hover {
+    background-color: #ffffff; /* Fundo branco no hover */
+    color: #3F2A87 !important; /* Texto na cor da navbar (#3F2A87) no hover */
+}
+
+/* Botão "Cadastre-se" */
+.navbar-dark .navbar-nav .nav-item .btn-light { 
     background-color: #ffffff;
     color: #3F2A87; /* Cor do texto do botão "Cadastre-se" para o roxo principal */
-    border-radius: 15px; /* Bordas arredondadas para o botão */
+    border-radius: 12px; /* Bordas arredondadas para o botão */
     padding-left: 15px; /* Mais padding horizontal */
     padding-right: 15px;
     padding-top: 6px; /* Padding vertical menor */

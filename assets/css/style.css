@@ -211,3 +211,151 @@ body {
         bottom: 20px; /* Ajusta posição do "Ver Mais" em mobile */
     }
 }
+
+/* Coluna do Formulário (Esquerda) */
+.login-form-column {
+    background-color: #1E1B2E; 
+}
+
+.login-form-content {
+    max-width: 550px; /* Limita a largura do conteúdo do formulário */
+    width: 100%;
+}
+
+.login-logo-page { /* Logo página de login */
+    max-height: 70px; /* Ajuste conforme necessário */
+}
+
+.login-form-content h2 {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.login-input.form-control { /* Estilo para os inputs */
+    background-color: #E8E6F3; /* Fundo cinza claro dos inputs */
+    border: none;
+    border-radius: 25px; /* Bordas bem arredondadas */
+    padding-bottom: 0.75rem; 
+    color: #1A0F3A; /* Cor do texto dentro do input */
+    line-height: 1.5; /* Ajuste de line-height pode ajudar */
+    height: auto; 
+    padding-top: 1.625rem;  /* Espaço para o label flutuado */
+    padding-bottom: .625rem; /* Espaço abaixo do texto */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* Faz o placeholder do input ser transparente quando o label está sobre ele */
+.login-form-column .form-floating > .login-input.form-control::placeholder {
+    color: transparent;
+}
+
+.login-input.form-control::placeholder {
+    color: #6c757d; /* Cor do placeholder */
+}
+
+/* Restaura a cor do placeholder quando o label flutua*/
+.login-form-column .form-floating > .login-input.form-control:focus::placeholder,
+.login-form-column .form-floating > .login-input.form-control:not(:placeholder-shown)::placeholder {
+    color: #6c757d; /* Cor padrão do placeholder */ 
+}
+
+.login-input.form-control:focus {
+    background-color: #E8E6F3;
+    color: #1A0F3A;
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.3); /* Sombra amarela ao focar */
+    border: none;
+}
+
+/* Ajuste para labels flutuantes se estiver usando form-floating */
+.login-form-column .form-floating > label {
+    color: #6c757d; /* Cor do label flutuante */
+    /* O padding do label deve corresponder ao padding do input para alinhamento inicial */
+    padding-top: 1.25rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    /* Garante que o label não seja maior que o input */
+    width: 100%; 
+    height: 100%;
+    pointer-events: none; /* Para que cliques passem para o input */
+    border: 1px solid transparent; /* Para manter o layout consistente */
+}
+.login-form-column .form-floating > .form-control:focus ~ label,
+.login-form-column .form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: #1A0F3A; /* Cor do label quando ativo/focado */
+    
+    transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+}
+
+/* Botão "Entrar" */
+.btn-login-custom { 
+    background-color: #4A3AFF; /* Roxo do botão do design */
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+}
+.btn-login-custom:hover {
+    background-color: #3a2dcc;
+    color: #FFFFFF;
+}
+
+.login-form-column .small a { /* Link "Esqueceu sua senha?" e "Cadastre-se" */
+    font-weight: 500;
+}
+.login-form-column .link-warning { /* Para o "Cadastre-se" */
+    color: #FFC107 !important; /* Amarelo do design */
+    text-decoration: none;
+}
+.login-form-column .link-warning:hover {
+    text-decoration: underline;
+}
+.login-form-column .text-white-50 {
+    text-decoration: none;
+}
+.login-form-column .text-white-50:hover {
+    text-decoration: underline;
+    color: #FFC107 !important;
+}
+
+
+/* Coluna do "Aside" (Direita) */
+.login-aside-column {
+    background-color: #3F2A87; /* Roxo um pouco mais claro do design */
+    /* d-flex flex-column justify-content-center align-items-center já estão no HTML */
+}
+.login-aside-content {
+    max-width: 450px; /* Limita a largura do conteúdo do aside */
+    width: 100%;
+}
+.login-aside-content h3 {
+    font-size: 2.5rem; /* Ajuste o tamanho da fonte */
+}
+.login-aside-content .text-warning {
+    color: #FFC107 !important; /* Amarelo do design */
+}
+.login-aside-content .lead {
+    font-size: 1.25rem;
+}
+
+/* Ocultar a navbar na página de login */
+body.login-active #main-header-placeholder {
+    display: none;
+}
+body.login-active main#app-container {
+    padding-top: 0 !important; /* Remover padding-top do body se a navbar estiver oculta */
+    margin-top: 0 !important; /* Remover a margem da navbar quando estiver oculta */
+}
+
+body.login-active {
+    padding-top: 0 !important;
+}
+
+/* Ajustes para telas de celualr, onde a coluna da direita fica ocultada */
+@media (max-width: 991.98px) { /* Abaixo de LG */
+    .login-form-column {
+        min-height: 100vh; /* Garante que a coluna do formulário ocupe a tela inteira, top */
+    }
+}

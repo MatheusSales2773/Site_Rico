@@ -1,11 +1,14 @@
-<div class="container-fluid p-0"> 
-    <div class="row g-0 min-vh-100"> 
-        
+<div class="container-fluid p-0">
+    <div class="row g-0 min-vh-100">
         <!-- Coluna da Esquerda: Formulário -->
-        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center login-form-column"> 
-            <div class="login-form-content text-center text-white p-4 p-md-5"> <!--  Conteúdo do formulário -->
-                <img src="assets/images/logo-rico-02.png" alt="RICO Logo" class="login-logo-page mb-4" style="max-height: 250px;"> <!-- classe para logo da página -->
-                <h2 class="display-5 mt-0">Acesse sua conta</h2>
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center login-form-column">
+            <div class="login-form-content text-center text-white p-4 p-md-5">
+                <!-- Logo Adicionado -->
+                <div class="login-logo-container mb-4">
+                        <img src="assets/images/logo-rico-02.png" alt="Rico Logo" class="login-logo-page mb-2" style="max-height: 250px;">
+                </div>
+                <h2 class="mb-4">Acesse sua conta</h2>
+                <form id="loginForm" style="max-width: 400px; margin: auto;">
                 
                 <form id="loginForm" style="max-width: 400px; margin: auto;">
                     <div class="form-floating mb-3">
@@ -27,10 +30,15 @@
 
         <!-- Coluna da Direita: Imagem e Boas-vindas -->
         <div class="col-lg-6 d-none d-lg-flex flex-column justify-content-center align-items-center login-aside-column">
+
+            <!-- Imagens de fundo decorativas -->
+            <img src="assets/images/bola_login_01.png" alt="Decoração círculo roxo" class="background-circle circle-login-1">
+            <img src="assets/images/bola_login_02.png" alt="Decoração círculo rosa" class="background-circle circle-login-2">
+            
             <div class="login-aside-content text-center text-white p-4 p-md-5">
-                <img src="assets/images/login-aside-image.png" alt="Ilustração Login" class="img-fluid mb-4" style="max-width: 350px;"> <!-- Substitua pela imagem correta do design -->
-                <h3 class="fw-bold">Bem-vindo ao <span class="text-warning">Rico!</span></h3>
-                <p class="lead">O lugar ideal para você aprender a investir!</p>
+                <h3 class="fw-bold">Bem-vindo ao <span class="text-warning"><br>Rico!</span></h3>
+                <img src="assets/images/menina_com_moeda.png" alt="Ilustração Login" class="img-fluid mb-4 login-illustration">
+                <p class="lead">O lugar ideal para <br> você aprender a <br>  investir!</p>
             </div>
         </div>
 

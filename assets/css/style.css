@@ -212,18 +212,14 @@ body {
     }
 }
 
-/* Coluna do Formulário (Esquerda) */
+/* Coluna de Login (Esquerda) */
 .login-form-column {
     background-color: #1E1B2E; 
 }
 
 .login-form-content {
-    max-width: 550px; /* Limita a largura do conteúdo do formulário */
+    max-width: 550px;
     width: 100%;
-}
-
-.login-logo-page { /* Logo página de login */
-    max-height: 70px; /* Ajuste conforme necessário */
 }
 
 .login-form-content h2 {
@@ -321,23 +317,68 @@ body {
 }
 
 
-/* Coluna do "Aside" (Direita) */
+/* Coluna Login (Direita) */
 .login-aside-column {
-    background-color: #3F2A87; /* Roxo um pouco mais claro do design */
-    /* d-flex flex-column justify-content-center align-items-center já estão no HTML */
+    position: relative;
+    overflow: hidden;
+    background-color: #3F2A87;
 }
-.login-aside-content {
-    max-width: 450px; /* Limita a largura do conteúdo do aside */
+
+.background-circle {
+    position: absolute;
+    z-index: 0; }
+
+.circle-login-1 {
+    width: 55%;   
+    height: 75%; 
+    top: 10%;    
+    left: 0px;   
+    opacity: 0.95;  
+}
+
+.circle-login-2 {
+    width: 50%;  
+    height: 25%; 
+    bottom: 0px; 
+    right: 0px;  
+    opacity: 0.8;
+}
+
+.login-aside-content { 
+    position: relative;
+    z-index: 1;
+    max-width: 650px; /* Limita a largura do conteúdo do aside */
     width: 100%;
 }
+
 .login-aside-content h3 {
-    font-size: 2.5rem; /* Ajuste o tamanho da fonte */
+    font-size: 40px; 
+    text-align: left;
+    margin-top: 9%;
+    margin-left: 32%;
+    font-weight: 700;
 }
 .login-aside-content .text-warning {
     color: #FFC107 !important; /* Amarelo do design */
 }
+
+.login-aside-content .login-illustration { 
+    max-width: 600px; 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-left: -30%; /* Considere ajustar se o layout quebrar */
+    margin-right: 0%; 
+    margin-top: 0;
+}
+
 .login-aside-content .lead {
-    font-size: 1.25rem;
+    font-size: 2.0rem;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: left;
+    margin-left: -20%;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* Ocultar a navbar na página de login */

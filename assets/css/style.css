@@ -404,3 +404,124 @@ body.login-active {
 body.login-page {
     padding-top: 0 !important;
 }
+
+/* Cadastro */
+
+body.cadastro-page {
+    background: #1E1B2E;
+    padding-top: 0 !important;
+    font-family: 'Arial', sans-serif;
+}
+
+.aside-cadastro {
+    background: #3F2A87;
+    position: relative;
+    overflow: hidden;
+}
+
+.aside-content h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 10%;
+    margin-bottom: 2rem;
+}
+
+.aside-content .text-warning {
+    color: #FFC107 !important;
+}
+
+.ilustracao-cadastro {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+}
+
+.form-cadastro-column {
+    background: #1E1B2E;
+    min-height: 100vh;
+    position: relative;
+}
+
+.form-cadastro-content h2 {
+    font-weight: 500;
+    color: #fff;
+}
+
+.input-cadastro.form-control {
+    background: #E8E6F3;
+    border: none;
+    border-radius: 25px;
+    color: #1A0F3A;
+    padding-left: 1.5rem;
+    padding-right: 2.5rem;
+    height: 48px;
+}
+
+.input-cadastro.form-control:focus {
+    background: #E8E6F3;
+    color: #1A0F3A;
+    box-shadow: 0 0 0 0.2rem rgba(63,42,135,0.15);
+    border: none;
+}
+
+.form-floating > label {
+    color: #6c757d;
+    padding-left: 1.5rem;
+}
+
+.input-icon {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c63ff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.form-floating {
+    position: relative;
+}
+
+.btn-cadastro {
+    background: #E8E6F3;
+    color: #3F2A87;
+    font-weight: 500;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    padding: .6rem 0;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-cadastro:hover {
+    background: #d6d3f0;
+    color: #301F6A;
+}
+
+.btn-close-cadastro {
+    background: transparent !important;
+    color: #fff !important;
+    font-size: 2rem;
+    line-height: 1;
+    border: none;
+    box-shadow: none;
+    z-index: 10;
+}
+
+.form-check-input:checked {
+    background-color: #3F2A87;
+    border-color: #3F2A87;
+}
+
+@media (max-width: 991.98px) {
+    .aside-cadastro {
+        display: none !important;
+    }
+    .form-cadastro-column {
+        min-height: 100vh;
+    }
+}

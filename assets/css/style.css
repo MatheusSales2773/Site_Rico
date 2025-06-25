@@ -400,3 +400,7 @@ body.login-active {
         min-height: 100vh; /* Garante que a coluna do formulário ocupe a tela inteira, top */
     }
 }
+
+body.login-page {
+    padding-top: 0 !important;
+}

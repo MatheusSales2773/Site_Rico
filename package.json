@@ -1,0 +1,24 @@
+{
+  "name": "site_rico",
+  "version": "1.0.0",
+  "description": "**Aplicativo de educação financeira gamificada, conceituado nas aulas de Novas Tecnologias na Universidade Católica de Brasília e destinado a atender demandas do Ministério da Fazenda.**",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusSales2773/Site_Rico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatheusSales2773/Site_Rico/issues"
+  },
+  "homepage": "https://github.com/MatheusSales2773/Site_Rico#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

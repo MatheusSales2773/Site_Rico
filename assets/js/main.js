@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const appContainer = document.getElementById('app-container');
     const mainHeaderPlaceholder = document.getElementById('main-header-placeholder');
 
+    if (mainHeaderPlaceholder) {
+        fetch('/partials/header.html')
+            .then(response => response.text())
+            .then(data => {
+            mainHeaderPlaceholder.innerHTML = data;
+            });
+        }
+
     // Função para carregar HTML dinamicamente COM CALLBACK
     async function loadHTML(targetElementId, filePath, callback) {
         try {
@@ -147,12 +155,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Inicialização ---
     if (mainHeaderPlaceholder) {
-        // console.log("Carregando header...");
-        loadHTML('main-header-placeholder', 'app/views/partials/header.html', addNavigationListeners);
-    } // else { // console.error("Elemento #main-header-placeholder não encontrado no DOM antes de carregar o header."); }
-
-    // Renderizar o conteúdo da página inicial por padrão
+    loadHTML('main-header-placeholder', '/partials/header.html', addNavigationListeners);
+    }
     renderHomePageContent();
 
-    // console.log("Página principal e header (com listeners) deveriam estar configurados.");
 });

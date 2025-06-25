@@ -1,11 +1,18 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
+const userController = require('./app/controllers/userController');
+const User = require('./app/models/User');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
-// Servir arquivos estáticos
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/partials', express.static(path.join(__dirname, 'app', 'views', 'partials')));
+
+// Configurar body-parser pra ler dados
+app.use(bodyParser.urlencoded({ extended: true }));
+
+User.createTable();
 
 // Rota para cadastro
 app.get('/cadastro', (req, res) => {
@@ -21,6 +28,9 @@ app.get('/login', (req, res) => {
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+app.post('/cadastro', userController.cadastrar);
+app.post('/login', userController.login);
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);

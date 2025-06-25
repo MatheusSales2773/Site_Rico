@@ -23,3 +23,8 @@ Thumbs.db
 # Pasta de build (se usar futuramente)
 dist/
 build/
+
+# Banco de dados SQLite
+*.db
+*.sqlite
+*.sqlite3

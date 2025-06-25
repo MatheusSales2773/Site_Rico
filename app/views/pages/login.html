@@ -17,13 +17,13 @@
                         <img src="/assets/images/logo-rico-02.png" alt="Rico Logo" class="login-logo-page mb-2" style="max-height: 250px;">
                 </div>
                 <h2 class="mb-4">Acesse sua conta</h2>        
-                <form id="loginForm" style="max-width: 400px; margin: auto;">
+                <form id="loginForm" action="/login" method="POST" style="max-width: 400px; margin: auto;">
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control login-input" id="loginEmail" placeholder="nome@exemplo.com" required>
+                        <input type="email" name="email" class="form-control login-input" id="loginEmail" placeholder="nome@exemplo.com" required>
                         <label for="loginEmail">Endereço de e-mail</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control login-input" id="loginPassword" placeholder="Senha" required>
+                        <input type="password" name="senha" class="form-control login-input" id="loginPassword" placeholder="Senha" required>
                         <label for="loginPassword">Senha</label>
                         <span class="input-icon"><i class="bi bi-eye"></i></span>
                     </div>

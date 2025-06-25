@@ -34,14 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Função para renderizar a Home Page
     function renderHomePageContent() {
-        // Garante que o header esteja visível e o body não tenha a classe de login
         if (mainHeaderPlaceholder) {
-            mainHeaderPlaceholder.style.display = ''; // Garante que o placeholder do header seja visível
+            mainHeaderPlaceholder.style.display = ''; 
         }
         document.body.classList.remove('login-active');
 
         if (appContainer) {
-            appContainer.innerHTML = ''; // Limpa o conteúdo anterior
+            appContainer.innerHTML = ''; 
 
             const mainPageWrapper = document.createElement('section');
             mainPageWrapper.className = 'main-page-wrapper';
@@ -113,33 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function addNavigationListeners() {
         if (!mainHeaderPlaceholder) {
             return;
-        }
-        // console.log("Adicionando listeners de navegação...");
-
-        const loginButton = mainHeaderPlaceholder.querySelector('.btn-outline-light');
-        if (loginButton) {
-            // console.log("Botão de login encontrado pela classe .btn-outline-light");
-            loginButton.addEventListener('click', function(event) {
-                event.preventDefault();
-                // console.log("Botão de login clicado!");
-                renderLoginPage();
-            });
-        } else {
-            // console.log("Botão de login NÃO encontrado por .btn-outline-light, tentando por texto...");
-            const navLinks = mainHeaderPlaceholder.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .btn');
-            let foundLoginByText = false;
-            navLinks.forEach(link => {
-                if (link.textContent && link.textContent.trim().toLowerCase() === 'login') {
-                    // console.log("Botão de login encontrado por texto:", link);
-                    foundLoginByText = true;
-                    link.addEventListener('click', function(event) {
-                        event.preventDefault();
-                        // console.log("Botão de login (encontrado por texto) clicado!");
-                        renderLoginPage();
-                    });
-                }
-            });
-            // if (!foundLoginByText) { // console.error("Botão de login não encontrado no header."); }
         }
 
         const brandLink = mainHeaderPlaceholder.querySelector('.navbar-brand');

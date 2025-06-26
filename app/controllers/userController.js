@@ -15,11 +15,13 @@ exports.cadastrar = (req, res) => {
     });
 };
 
-exports.login = (req, res) => {
+exports.login = function(req, res) {
     const { email, senha } = req.body;
-    User.findByEmailAndSenha(email, senha, (err, user) => {
+    const session = req.session;
+    User.findByEmailAndSenha(email, senha, function(err, user) {
         if (user) {
-            res.send('Login realizado com sucesso! <a href="/">Ir para home</a>');
+            session.user = { id: user.id, email: user.email }; // Usa a referência salva
+            res.redirect('/dashboard');
         } else {
             res.send('Usuário ou senha inválidos! <a href="/login">Tentar novamente</a>');
         }

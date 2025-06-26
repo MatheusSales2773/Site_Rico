@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const bodyParser = require('body-parser');
 const userController = require('./app/controllers/userController');
@@ -7,9 +8,16 @@ const User = require('./app/models/User');
 const app = express();
 const PORT = 3000;
 
+
 // Servir arquivos estáticos
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/partials', express.static(path.join(__dirname, 'app', 'views', 'partials')));
+
+app.use(session({
+    secret: 'seuSegredoSuperSecreto',
+    resave: false,
+    saveUninitialized: false
+}));
 
 // Configurar body-parser
 app.use(bodyParser.urlencoded({ extended: true }));

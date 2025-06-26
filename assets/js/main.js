@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 O lugar ideal para você aprender a investir e multiplicar seu dinheiro de forma divertida e prática.
                             </p>
                             <p>
-                                <a href="#" class="btn btn-custom-primary">ENTRE AGORA</a>
+                                <a href="/login" class="btn btn-custom-primary">ENTRE AGORA</a>
                                 <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="btn btn-custom-secondary" target="_blank">▷ VEJA O TRAILER</a>
                             </p>
                         </div>

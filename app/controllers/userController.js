@@ -17,9 +17,15 @@ exports.cadastrar = (req, res) => {
 
 exports.login = (req, res) => {
     const { email, senha } = req.body;
+
     User.findByEmailAndSenha(email, senha, (err, user) => {
         if (user) {
-            res.send('Login realizado com sucesso! <a href="/">Ir para home</a>');
+            // 🔐 Salva informações do usuário na sessão
+            req.session.userId = user.id;
+            req.session.email = user.email;
+
+            // Redireciona para a página de avaliações
+            res.redirect('/avaliacoes');
         } else {
             res.send('Usuário ou senha inválidos! <a href="/login">Tentar novamente</a>');
         }

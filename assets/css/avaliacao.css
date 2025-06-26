@@ -1,0 +1,64 @@
+/* style.css */
+body {
+  background-color: #2d213a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  height: 50px;
+}
+
+.rating-bar {
+  height: 8px;
+  background-color: #444;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.rating-fill {
+  background-color: #4caf50;
+  height: 100%;
+}
+
+.review-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: 180px;          
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.star {
+  color: gold;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.form-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.row.mt-4.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.col-md-4.d-flex {
+  display: flex;
+  flex-direction: column;
+}

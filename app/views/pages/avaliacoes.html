@@ -1,0 +1,131 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rico - Avaliações</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/avaliacao.css" />
+</head>
+<body>
+  <div class="container py-4">
+    <!-- Título e header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <img src="/assets/images/logo-rico.png" class="logo me-4" />
+      <div>
+        <img src="https://img.icons8.com/color/48/user-female-circle--v1.png" width="40" />
+      </div>
+    </div>
+
+    <!-- Título da seção -->
+    <h3 class="section-title">Classificações e resenhas →</h3>
+
+    <div class="row mt-4">
+      <!-- Avaliação geral -->
+      <div class="col-md-4 text-center">
+        <h1 class="display-4 fw-bold">4,1</h1>
+        <div class="rating-breakdown">
+          <div class="d-flex align-items-center">
+            5 ⭐
+            <div class="rating-bar w-75 ms-2">
+              <div class="rating-fill" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            4 ⭐
+            <div class="rating-bar w-75 ms-2">
+              <div class="rating-fill" style="width: 15%"></div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            3 ⭐
+            <div class="rating-bar w-75 ms-2">
+              <div class="rating-fill" style="width: 10%"></div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            2 ⭐
+            <div class="rating-bar w-75 ms-2">
+              <div class="rating-fill" style="width: 3%"></div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            1 ⭐
+            <div class="rating-bar w-75 ms-2">
+              <div class="rating-fill" style="width: 2%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulário de avaliação -->
+      <div class="col-md-8">
+        <h5>Avaliação do site</h5>
+        <div class="form-box">
+          <div id="stars" class="mb-2">
+            <span class="star">☆</span
+            ><span class="star">☆</span
+            ><span class="star">☆</span
+            ><span class="star">☆</span
+            ><span class="star">☆</span>
+          </div>
+          <textarea
+            class="form-control mb-2"
+            id="reviewText"
+            rows="3"
+            placeholder="Nos avalie!"
+          ></textarea>
+          <button class="btn btn-success" onclick="submitReview()">Enviar</button>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4 g-4">
+      <div class="col-md-4 d-flex">
+        <div class="review-box">
+          <strong class="d-block mb-2">Matheus_The_Best</strong>
+          <p class="m-0">Very good indeed</p>
+          <div class="mb-2">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="review-box">
+          <strong class="d-block mb-2">PauloKogos</strong>
+          <p class="m-0">Based e redpill no tocante ao ass</p>
+          <div class="mb-2">⭐⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="review-box">
+          <strong class="d-block mb-2">JoaoGamer123</strong>
+          <p class="m-0">Amei, muito bom!!!</p>
+          <div class="mb-2">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="review-box">
+          <strong class="d-block mb-2">DavyJones_RJ</strong>
+          <p class="m-0">Já vi todos os artigos!!!</p>
+          <div class="mb-2">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="review-box">
+          <strong class="d-block mb-2">Relam Santos</strong>
+          <p class="m-0">Me fez coçar a cabeça</p>
+          <div class="mb-2">⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="review-box">
+          <strong class="d-block mb-2">Adam Smith_The Greatest</strong>
+          <p class="m-0">É.</p>
+          <div class="mb-2">⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/avaliacao.js"></script>
+</body>
+</html>

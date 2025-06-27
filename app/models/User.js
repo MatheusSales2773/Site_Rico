@@ -54,3 +54,7 @@ exports.findByEmailAndSenha = (email, senha, callback) => {
 exports.findByEmail = (email, callback) => {
     db.get('SELECT * FROM usuarios WHERE email = ?', [email], callback);
 };
+
+exports.findById = (id, callback) => {
+    db.get('SELECT * FROM usuarios WHERE id = ?', [id], callback);
+};

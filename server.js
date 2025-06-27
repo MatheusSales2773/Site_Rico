@@ -7,7 +7,6 @@ const User = require('./app/models/User');
 
 const app = express();
 const PORT = 3000;
-const session = require('express-session');
 
 
 // Servir arquivos estáticos
@@ -21,13 +20,6 @@ app.use(session({
     secret: 'segredo-rico',
     resave: false,
     saveUninitialized: true
-}));
-
-
-app.use(session({
-    secret: 'seuSegredoSuperSecreto',
-    resave: false,
-    saveUninitialized: false
 }));
 
 // Configurar body-parser
@@ -52,12 +44,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// HEAD
-// ✅ Rota para tela de avaliações
-app.get('/avaliacoes', (req, res) => {
-  res.sendFile(path.join(__dirname, 'app', 'views', 'pages', 'avaliacoes.html'));
-});
-
 // Rotas de envio de formulário
 // Rota para avaliações
 app.get('/avaliacoes', (req, res) => {
@@ -69,6 +55,35 @@ app.get('/avaliacoes', (req, res) => {
             const outras = todas.filter(a => a.email !== req.session.email);
             res.render('avaliacoes', { minhaAvaliacao, outras });
         });
+    });
+});
+
+app.get('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            console.error('Erro ao encerrar a sessão:', err);
+            return res.status(500).send('Erro ao encerrar a sessão.');
+        }
+        res.redirect('/login');
+    });
+});
+
+
+app.get('/dashboard', (req, res) => {
+    const userId = req.session.userId;
+
+    if (!userId) {
+        return res.redirect('/login');
+    }
+
+    // você pode passar dados do usuário, se quiser
+    User.findById(userId, (err, user) => {
+        if (err || !user) {
+            console.error("Erro ao buscar usuário no dashboard:", err);
+            return res.status(500).send("Erro ao carregar o dashboard.");
+        }
+
+        res.render('dashboard', { user });
     });
 });
 

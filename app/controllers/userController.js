@@ -21,8 +21,8 @@ exports.login = function(req, res) {
     User.findByEmailAndSenha(email, senha, function(err, user) {
         if (user) {
             // Salva informações do usuário na sessão
-            req.session.user = { id: user.id, email: user.email };
-            // Redireciona para o dashboard (ou outra página, se preferir)
+            req.session.userId = user.id;
+            req.session.email = user.email;
             res.redirect('/dashboard');
         } else {
             res.send('Usuário ou senha inválidos! <a href="/login">Tentar novamente</a>');

@@ -17,10 +17,12 @@ exports.cadastrar = (req, res) => {
 
 exports.login = function(req, res) {
     const { email, senha } = req.body;
-    const session = req.session;
+
     User.findByEmailAndSenha(email, senha, function(err, user) {
         if (user) {
-            session.user = { id: user.id, email: user.email }; // Usa a referência salva
+            // Salva informações do usuário na sessão
+            req.session.user = { id: user.id, email: user.email };
+            // Redireciona para o dashboard (ou outra página, se preferir)
             res.redirect('/dashboard');
         } else {
             res.send('Usuário ou senha inválidos! <a href="/login">Tentar novamente</a>');

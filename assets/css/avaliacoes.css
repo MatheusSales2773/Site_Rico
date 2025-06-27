@@ -1,0 +1,53 @@
+.avaliacoes-container {
+  background-color: #1E1B2E;
+  color: white;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+  color: #FFD700;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #FFD700;
+}
+
+.avaliacoes-lista {
+  margin-top: 50px;
+}
+
+.avaliacao-box {
+  background-color: #2D234D;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.avaliacao-box img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.avaliacao-box strong {
+  color: #FFC107;
+}

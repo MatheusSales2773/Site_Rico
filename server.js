@@ -78,7 +78,6 @@ const artigosDB = [
             </div>
         `
     },
-    // Adicione os outros 4 artigos aqui com a mesma estrutura...
     { 
         id: 3, 
         titulo: "Como Economizar Dinheiro", 
@@ -213,7 +212,7 @@ app.get('/artigos/:id', (req, res) => {
     const artigo = artigosDB.find(a => a.id === artigoId);
 
     if (artigo) {
-        res.render('insideDict', { artigo }); // Passa os dados do artigo para o template
+        res.render('insideDict', { artigo });
     } else {
         res.status(404).send("Artigo não encontrado");
     }

@@ -2,11 +2,12 @@
 
 **Aplicativo de educação financeira gamificada, conceituado nas aulas de Novas Tecnologias na Universidade Católica de Brasília e destinado a atender demandas do Ministério da Fazenda.**
 
-![Tela Inicial do RicoApp](assets\images\inicial.png)
+![Tela Inicial do RicoApp](assets/images/inicial.png)
+![Uploading Login.png…]()
 
-![Login do RicoApp](assets\images\Login.png)
+![Login do RicoApp](assets/images/Login.png)
 
-![Tela Inicial do RicoApp](assets\images\area_do_usuario.jpg)
+![Tela Inicial do RicoApp](assets/images/area_do_usuario.jpg)
 
 [![GitHub issues](https://img.shields.io/github/issues/MatheusSales2773/Site_Rico)](https://github.com/MatheusSales2773/Site_Rico/issues)
 [![GitHub forks](https://img.shields.io/github/forks/MatheusSales2773/Site_Rico)](https://github.com/MatheusSales2773/Site_Rico/network)

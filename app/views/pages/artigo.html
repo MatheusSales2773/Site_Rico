@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rico - Artigos Educacionais</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <style>
+        /* Estilos gerais da página */
+        body {
+            margin: 0;
+        }
+        body.dashboard-page {
+            background: #1E1B2E !important; 
+        }
+        .dashboard-card {
+            background: #694BD3 !important; 
+            box-shadow: none !important;
+            border: none !important;
+        }
+        .dashboard-card::before {
+            display: none !important;
+        }
+        .dashboard-card:hover {
+            background: linear-gradient(135deg, #FFC107, #c89a0a) !important;
+            color: #3F2A87 !important;
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25) !important;
+        }
+        .dashboard-card:hover i,
+        .dashboard-card:hover span {
+            color: #3F2A87 !important;
+        }
+        nav.dashboard-nav {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            background-color: #2D234D;
+            border-bottom: 2px solid #FFC107;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="dashboard-page">
+
+    <nav class="dashboard-nav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/dashboard" class="text-white text-decoration-none fs-5 fw-bold">Rico</a>
+            <a href="/logout" class="btn btn-outline-light">Logout</a>
+        </div>
+    </nav>
+    
+    <a href="/dashboard" class="btn btn-outline-light mt-5 ms-5">&larr; Voltar ao Painel</a>
+
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-white">Artigos Educacionais</h1>
+            <p class="lead text-white-50">Explore nosso conteúdo e aprenda a investir.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <a href="/artigos/1" class="dashboard-card text-decoration-none w-100">
+                    <i class="bi bi-book-half"></i>
+                    <span>Fundamentos da Educação Financeira</span>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <a href="/artigos/2" class="dashboard-card text-decoration-none w-100">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <span>Investimentos para Iniciantes</span>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <a href="/artigos/3" class="dashboard-card text-decoration-none w-100">
+                    <i class="bi bi-piggy-bank"></i>
+                    <span>Como Economizar Dinheiro</span>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <a href="/artigos/4" class="dashboard-card text-decoration-none w-100">
+                    <i class="bi bi-credit-card-2-front"></i>
+                    <span>Gestão de Cartões de Crédito</span>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <a href="/artigos/5" class="dashboard-card text-decoration-none w-100">
+                    <i class="bi bi-calculator"></i>
+                    <span>Planejamento Financeiro Pessoal</span>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <a href="/artigos/6" class="dashboard-card text-decoration-none w-100">
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Educação Financeira para Jovens</span>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

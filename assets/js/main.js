@@ -10,13 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-    // Função para carregar HTML dinamicamente COM CALLBACK
     async function loadHTML(targetElementId, filePath, callback) {
         try {
             const response = await fetch(filePath);
             if (!response.ok) {
                 const targetElement = document.getElementById(targetElementId);
-                // Silenciosamente não faz nada ou exibe mensagem no UI se necessário
                 return;
             }
             const text = await response.text();
@@ -28,11 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         } catch (error) {
-            // Tratar erro silenciosamente ou exibir mensagem no UI
         }
     }
 
-    // Função para renderizar a Home Page
     function renderHomePageContent() {
         if (mainHeaderPlaceholder) {
             mainHeaderPlaceholder.style.display = ''; 
@@ -77,11 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Função para renderizar a Página de Login
     async function renderLoginPage() {
-        // Esconde o header e adiciona a classe de login ao body
         if (mainHeaderPlaceholder) {
-            mainHeaderPlaceholder.style.display = 'none'; // Esconde o placeholder do header
+            mainHeaderPlaceholder.style.display = 'none';
         }
         document.body.classList.add('login-active');
 
@@ -89,26 +83,20 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 const response = await fetch('app/views/pages/login.html');
                 if (!response.ok) {
-                    // Tratar erro, talvez reverter as classes/estilos
                     if (mainHeaderPlaceholder) mainHeaderPlaceholder.style.display = '';
                     document.body.classList.remove('login-active');
                     if (response.status === 404) throw new Error('Arquivo login.html não encontrado.');
                     throw new Error('Falha ao carregar a página de login.');
                 }
                 const html = await response.text();
-                appContainer.innerHTML = html; // Carrega o HTML do login
+                appContainer.innerHTML = html;
             } catch (error) {
-                // console.error('Erro ao renderizar página de login:', error); // Pode reativar para depuração
-                // Reverte o estado em caso de erro ao carregar o HTML do login
                 if (mainHeaderPlaceholder) mainHeaderPlaceholder.style.display = '';
                 document.body.classList.remove('login-active');
-                // Poderia exibir uma mensagem de erro no UI
-                // appContainer.innerHTML = `<p class="text-danger text-center">Ocorreu um erro ao carregar a página de login.</p>`;
             }
         }
     }
 
-    // Função para adicionar listeners de navegação (DEPOIS que o header for carregado)
     function addNavigationListeners() {
         if (!mainHeaderPlaceholder) {
             return;

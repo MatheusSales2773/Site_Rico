@@ -4,34 +4,88 @@
     <meta charset="UTF-8">
     <title>Painel do Usuário - Rico</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body.dashboard-page {
+            /* 1. Fundo sólido, sem degradê */
+            background: #1E1B2E !important;
+        }
+
+        .dashboard-card {
+            /* 2. Cor sólida para os cards e remoção de brilho/sombra */
+            background: #694BD3 !important; 
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        .dashboard-card::before {
+            /* Garante a remoção do efeito de brilho */
+            display: none !important;
+        }
+
+        /* Efeito hover mantido para feedback */
+        .dashboard-card:hover {
+            background: linear-gradient(135deg, #FFC107, #c89a0a) !important;
+            color: #3F2A87 !important;
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25) !important;
+        }
+        
+        .dashboard-card:hover i,
+        .dashboard-card:hover span {
+            color: #3F2A87 !important;
+        }
+
+        /* 3. Ajustes na barra de navegação */
+        nav.dashboard-nav {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            background-color: #2D234D; /* Cor de fundo consistente */
+            border-bottom: 2px solid #FFC107;
+            width: 100%; /* Garante largura total */
+        }
+    </style>
 </head>
 <body class="dashboard-page">
-    <nav>
-        <span>Bem-vindo, <%= user?.email?.split('@')[0] || 'Usuário' %>!</span>
-        <a href="/logout" class="btn btn-outline-light">Logout</a>
+    <nav class="dashboard-nav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="fs-5 fw-bold">Bem-vindo, <%= user?.email?.split('@')[0] || 'Usuário' %>!</span>
+            <a href="/logout" class="btn btn-outline-light">Logout</a>
+        </div>
     </nav>
 
-    <main>
-        <h1>Seu painel</h1>
-        <div class="dashboard-cards">
-            <a href="/avaliacoes" class="dashboard-card">
-                <i class="bi bi-star-fill"></i>
-                <span>Avaliações</span>
-            </a>
-            <a href="#" class="dashboard-card">
-                <i class="bi bi-person-circle"></i>
-                <span>Perfil</span>
-            </a>
-            <a href="/dicionario" class="dashboard-card">
-                <i class="bi bi-book"></i>
-                <span>Dicionário</span>
-            </a>
-            <a href="/" class="dashboard-card">
-                <i class="bi bi-house-door"></i>
-                <span>Tela Inicial</span>
-            </a>
+    <main class="container">
+        <div class="text-center my-5">
+             <h1 class="display-4 fw-bold">Seu painel</h1>
+        </div>
+       
+        <div class="row g-4 justify-content-center">
+             <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
+                <a href="/avaliacoes" class="dashboard-card text-decoration-none w-100">
+                    <i class="bi bi-star-fill"></i>
+                    <span>Avaliações</span>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
+                <a href="#" class="dashboard-card text-decoration-none w-100">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Perfil</span>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
+                <a href="/artigos" class="dashboard-card text-decoration-none w-100">
+                    <i class="bi bi-book"></i>
+                    <span>Artigos</span>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
+                <a href="/" class="dashboard-card text-decoration-none w-100">
+                    <i class="bi bi-house-door"></i>
+                    <span>Tela Inicial</span>
+                </a>
+            </div>
         </div>
     </main>
 </body>
